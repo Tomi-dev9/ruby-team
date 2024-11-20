@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Warna latar belakang untuk keseluruhan halaman */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5a5a;
+}
+
+.navbar nav {
+  display: flex; /* Menambahkan flex untuk navbar */
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Transisi untuk hover */
+}
+
+.navbar nav a:hover {
+  color: #ff5a5a; /* Warna saat hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar nav {
+      display: none; /* Menyembunyikan navbar pada layar kecil */
+  }
+  .navbar {
+      justify-content: space-between;
+  }
+}
+
+/* Team Introduction Section */
+.team-intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ff5a5a, #ffadad);
+  color: #fff;
+}
+
+.team-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.team-intro p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Team Grid Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.team-member {
+  text-align: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.team-member h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.team-member p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Team Grid */
+@media (max-width: 600px) {
+  .team-intro h1 {
+      font-size: 1.5rem; /* Ukuran font yang lebih kecil untuk judul */
+  }
+  .team-grid {
+      grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+      padding: 1rem;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5a5a;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+      text-align: center; /* Rata tengah untuk footer */
+  }
+  .footer-logo {
+      margin-bottom: 1rem; /* Jarak bawah untuk logo footer */
+  }
+  .footer-social {
+      justify-content: center; /* Rata tengah untuk sosial footer */
+  }
+}
