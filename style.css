@@ -1,155 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #ff3366;
+    --secondary-color: #6a11cb;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9; /* Warna latar belakang untuk keseluruhan halaman */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* Navbar */
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #eaeaea;
+  padding-right: 50px;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ff5a5a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
-.navbar nav {
-  display: flex; /* Menambahkan flex untuk navbar */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.navbar nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease; /* Transisi untuk hover */
+nav a:hover {
+    color: rgba(255,255,255,0.7);
 }
 
-.navbar nav a:hover {
-  color: #ff5a5a; /* Warna saat hover */
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/images.jpg');
+    background-size: cover;
+    color: white;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .navbar nav {
-      display: none; /* Menyembunyikan navbar pada layar kecil */
-  }
-  .navbar {
-      justify-content: space-between;
-  }
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-/* Team Introduction Section */
-.team-intro {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, #ff5a5a, #ffadad);
-  color: #fff;
+/* Team Section */
+#team {
+    padding: 50px 0;
+    background-color: white;
 }
 
-.team-intro h1 {
+#team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.our-team{
   font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
-.team-intro p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Team Grid Section */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding: 2rem;
-  background-color: #f9f9f9;
+.team-members {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+  margin: 0 50px; 
 }
 
 .team-member {
-  text-align: center;
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
 }
 
 .team-member img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .team-member h3 {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+    margin: 15px 0 5px;
+    color: var(--primary-color);
 }
 
 .team-member p {
-  color: #666;
-  font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-/* Responsive Team Grid */
-@media (max-width: 600px) {
-  .team-intro h1 {
-      font-size: 1.5rem; /* Ukuran font yang lebih kecil untuk judul */
-  }
-  .team-grid {
-      grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
-      padding: 1rem;
+#about {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#about h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 2rem
+}
+
+#about p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-10px);
+}
+
+.stat h3 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive About Section */
+@media screen and (max-width: 768px) {
+  .about-stats {
+      flex-direction: column;
+      gap: 20px;
   }
 }
 
 /* Footer */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #333;
-  color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 30px 0;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ff5a5a;
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
 }
 
-.footer-social {
-  display: flex;
-  gap: 1rem;
+.social-links a:hover {
+    color: rgba(255,255,255,0.7);
 }
 
-.footer-social a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
+footer p {
+    margin-top: 15px;
 }
 
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
-  footer {
-      flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
-      text-align: center; /* Rata tengah untuk footer */
-  }
-  .footer-logo {
-      margin-bottom: 1rem; /* Jarak bawah untuk logo footer */
-  }
-  .footer-social {
-      justify-content: center; /* Rata tengah untuk sosial footer */
-  }
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
 }
