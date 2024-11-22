@@ -65,11 +65,14 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-    text-align: center;
-    padding: 80px 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/images.jpg');
-    background-size: cover;
-    color: white;
+  text-align: center;
+  padding: 80px 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/all.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
 }
 
 #hero h2 {
